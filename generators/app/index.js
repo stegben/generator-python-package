@@ -213,6 +213,7 @@ module.exports = class extends Generator {
     );
 
     cp('.flake8', '.flake8');
+    cp('_Makefile', 'Makefile');
     cp('.editorconfig', '.editorconfig');
     cp('.gitignore', '.gitignore');
     cp('_requirements.txt', 'requirements.txt');
