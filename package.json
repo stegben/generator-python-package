@@ -24,7 +24,10 @@
   "homepage": "https://github.com/stegben/generator-python3-package#readme",
   "dependencies": {
     "babel-eslint": "^8.2.5",
-    "yeoman-generator": "^3.0.0"
+    "generator-license": "^5.4.0",
+    "update-notifier": "^2.5.0",
+    "yeoman-generator": "^3.0.0",
+    "yosay": "^2.0.2"
   },
   "devDependencies": {
     "eslint": "^3.19.0 || ^4.8.0",
