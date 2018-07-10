@@ -1,7 +1,7 @@
-# <%= package %>
+# <%= packageName %>
 
-<% if (useTravisCI) { %>[![Build Status](https://travis-ci.org/<%= githubUserName %>/<%= package %>.svg?branch=master)](https://travis-ci.org/<%= githubUserName %>/<%= package %>)
-<% } %>[
+<% if (useTravisCI) { %>[![Build Status](https://travis-ci.org/<%= githubUserName %>/<%= packageName %>.svg?branch=master)](https://travis-ci.org/<%= githubUserName %>/<%= packageName %>)
+<% } %>
 
 About this project...
 

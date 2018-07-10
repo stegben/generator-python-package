@@ -66,7 +66,7 @@ module.exports = class extends Generator {
       {
         defaults: this.config.get('useTravisCI') || 0,
         desc: 'Create a travis.yml file.',
-        type: 'boolean',
+        type: Boolean,
       });
   }
 
@@ -130,8 +130,7 @@ module.exports = class extends Generator {
       },
       {
         default: this.options.useTravisCI,
-        choices: require('./ci-providers'),
-        message: 'Your CI provider',
+        message: 'Use TravisCI or not',
         name: 'useTravisCI',
         type: 'boolean',
       },
@@ -163,21 +162,13 @@ module.exports = class extends Generator {
 
   writing() {
     const cp = (from, to) => {
-      this.fs.cp(this.destinationPath(from), this.destinationPath(to));
+      this.fs.copy(this.templatePath(from), this.destinationPath(to));
     };
 
     this.composeWith(require.resolve('generator-license'), {
       name: this.fullName,
       email: this.email,
     });
-
-    this.fs.copyTpl(
-      this.templatePath('coveragerc'),
-      this.destinationPath('.coveragerc'),
-      {
-        packageName: this.packageName,
-      }
-    );
 
     this.fs.copyTpl(
       this.templatePath('_setup.py'),
@@ -199,11 +190,6 @@ module.exports = class extends Generator {
         }
       );
     }
-
-    this.fs.copy(
-      this.templatePath('gitignore'),
-      this.destinationPath('.gitignore')
-    );
 
     this.fs.write(
       this.destinationPath(this.packageName + '/__init__.py'),
@@ -228,6 +214,7 @@ module.exports = class extends Generator {
 
     cp('.flake8', '.flake8');
     cp('.editorconfig', '.editorconfig');
+    cp('.gitignore', '.gitignore');
     cp('_requirements.txt', 'requirements.txt');
 
     this.config.set('version', this.pkg.version);
