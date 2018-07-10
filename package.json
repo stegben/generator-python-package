@@ -1,0 +1,37 @@
+{
+  "name": "generator-python3-package",
+  "version": "0.1.0",
+  "description": "Yeoman generator for python3 packages",
+  "files": [
+    "generators"
+  ],
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "lint": "eslint ."
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/stegben/generator-python3-package.git"
+  },
+  "keywords": [
+    "yeoman-generator"
+  ],
+  "author": "cph",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/stegben/generator-python3-package/issues"
+  },
+  "homepage": "https://github.com/stegben/generator-python3-package#readme",
+  "dependencies": {
+    "babel-eslint": "^8.2.5",
+    "yeoman-generator": "^3.0.0"
+  },
+  "devDependencies": {
+    "eslint": "^3.19.0 || ^4.8.0",
+    "eslint-config-yoctol": "^0.17.1",
+    "eslint-plugin-import": "^2.13.0",
+    "eslint-plugin-jsx-a11y": "^6.0.3",
+    "eslint-plugin-prettier": "^2.6.2",
+    "eslint-plugin-react": "^7.9.1"
+  }
+}
