@@ -4,7 +4,6 @@ cache: pip
 
 python:
 - '3.6'
-- '3.7'
 - 'nightly'
 
 matrix:
@@ -18,11 +17,8 @@ script:
 - make lint
 - make test
 
-env:
-- secure: ""
-
 deploy:
-- provider: pypi
+  provider: pypi
   user: <%= pypiUserName %>
   password:
     secure: ""
@@ -32,4 +28,3 @@ deploy:
     tags: true
     python:
       - 3.6
-      - 3.7

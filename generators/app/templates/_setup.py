@@ -20,7 +20,7 @@ setup(
     ],
     author='<%= fullName %>',
     author_email='<%= email %>',
-    url='https://github.com/samuelcolvin/arq',
+    url='',
     license='MIT',
     install_requires=[],
 )
